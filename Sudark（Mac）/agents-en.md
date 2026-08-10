@@ -27,6 +27,28 @@
 - For Web interface changes, you must perform the necessary basic visual checks. Unless the user explicitly requests otherwise, do not expand this into full automated testing, compatibility testing, or additional acceptance procedures.
 - Do not adapt web pages for mobile by default. Handle mobile requirements only when the user explicitly requests them.
 
+## Safe Spacing for Web Text Controls
+
+- Text controls with a background or border, including buttons and labels, must preserve explicit and stable horizontal and vertical safe padding. Text and icons must not touch the edges, be clipped, overflow, or overlap one another.
+- Link-style buttons, including `a` and `RouterLink`, must be checked for their final computed padding and CSS specificity. Global link reset styles must not override button-component spacing.
+- Basic Web visual checks must use the interface's actual longest copy to verify surrounding whitespace and text-icon spacing. When a shared style causes the same problem across components, fix the shared root cause instead of adding a patch for only one page.
+
+## Git Commit Message Format
+
+- All commit messages must use the following fixed format. Do not use Conventional Commits prefixes such as `fix:` or `feat:` unless the user explicitly requests otherwise:
+
+```text
+中文摘要 ｜ eng brief :
+
+details | 要点：
+1. xxx
+2. xxx
+```
+
+- The first line must contain both a Chinese summary and a brief English description, separated by the full-width `｜` character, and must end with an ASCII colon `:`.
+- Keep one blank line between the summary and the details. The details heading must be exactly `details | 要点：`.
+- Use a `1. 2. 3.` numbered list to describe the actual changes in the commit. Each item must be specific and complete rather than vague.
+
 ## Mandatory Pre-Deployment Verification
 
 - Before any commit, merge, or push that triggers deployment, run the project's complete test suite, type checks, and server-side tests. Prefer the project's aggregate verification command when one exists.
