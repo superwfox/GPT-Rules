@@ -1,9 +1,15 @@
 # GPT Rules
 
-这是我在 macOS 上使用 Codex 的全局协作规则。
+这个仓库用于按使用场景维护不同的 Codex 全局协作规则。当前收录的是我在 macOS 上使用的配置；后续还会加入 Windows 上用于 MC 方向开发的 Codex 配置。
 
-- [中文版本](./Mac/agents.md)
-- [English version](./Mac/agents-en.md)
+## 配置目录
+
+### Sudark（Mac）
+
+- [中文版本](./Sudark（Mac）/agents.md)
+- [English version](./Sudark（Mac）/agents-en.md)
+
+Windows / MC 配置将在后续单独加入，以免不同平台和开发方向的规则混在一起。
 
 ## 为什么需要这些规则
 
